@@ -16,6 +16,10 @@
 
 <body>
     <div class="page-header">
+        {% if user.is_authenticated %}
+        <!-- aca para llamar y hacer un nuevo post-->
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
         <h1>
             <a href="/">Primer blog Santi</a>
         </h1>
